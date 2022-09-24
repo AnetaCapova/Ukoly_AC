@@ -6,13 +6,9 @@ baliky = {
     "B947X": False,
 }
 
-kod_baliku = input("Zadej prosím kód balíku: ")
+kod_baliku = input("Zadejte prosím kód balíku: ")
 
-if kod_baliku in baliky:
-    baliky.values == True
+if kod_baliku in baliky.values == True:
     print("Balík byl předán kurýrovi")
 else:
     print("Balík zatím nebyl předán kurýrovi")
-
-
-    
