@@ -13,3 +13,6 @@ if kod_baliku in baliky:
     print("Balík byl předán kurýrovi")
 else:
     print("Balík zatím nebyl předán kurýrovi")
+
+
+    
