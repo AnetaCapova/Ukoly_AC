@@ -490,16 +490,15 @@ staty = [
      'area': 390757.0}
      ]
 
-for item in staty:
-    region = item["region"]
-    # print(region)
-    names = item["name"]
-    # print(all_names)
-
 region_uzivatele = input("Napiš, jaký region tě zajímá: ")
+
+vsechny_staty = []
 
 for item in staty:
     if region_uzivatele == item["region"]:
-        print(f" V tomto regionu leží {names}")
-    else:    
-        print("Neznámý region")
+        # print(item["name"])
+        vsechny_staty.append(item["name"])
+if vsechny_staty == []:
+    print("Neznámý region")
+else:
+    print(vsechny_staty)
