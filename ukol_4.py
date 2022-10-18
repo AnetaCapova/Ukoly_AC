@@ -26,17 +26,18 @@ class Kucharka:
     def __init__(self, nazev, autor):
         self.nazev = nazev
         self.autor = autor
-        self.recepty = list(Recept)
-        recepty = []
-    def __str___(self):
+        self.recepty = []
+    def __str__(self):
         return f"Kuchařka se jmenuje {self.nazev}, napsal/a ji {self.autor} a obsahuje recepty, např. {self.recepty}."
     def pocet_receptu(self):
-        self.pocet_receptu += int("recepty")
-    def pridej_recept(self, recept):
-        self.pridej_recept += recept
+        pocet_receptu = len(self.recepty)
+        print(f"V kucharce je {pocet_receptu} receptu")
+    def pridej_recept(self, recept_novy):
+        self.recepty.append(recept_novy)
 
 kucharka = Kucharka("Veggie kuchařka", "Aneta Čápová")
+kucharka.pocet_receptu()
+kucharka.pridej_recept("pho")
+kucharka.pocet_receptu()
 print(kucharka)
-kucharka.pridej_recept(pho)
-print(kucharka.pocet_receptu())
 
