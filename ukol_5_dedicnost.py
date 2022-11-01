@@ -18,17 +18,16 @@ class Koronavirus(Nemoc):
         self.varianty = []
 
     def zmen_pocet_obeti(self):
-        super().pocet_obeti
+        super().pocet_obeti()
     
     def pridej_variantu(self, varianta):
         self.varianty.append(varianta)
     
     def __str__(self):
-        return super().__str__() + f" a varianty jsou: {self.varianty}."
+        return f'{super().__str__()}, má varianty: {", ".join(self.varianty)}'
 
-omikron = Koronavirus("Coronavirus", 4000, "vzduchem", ["omikron"])
+omikron = Koronavirus("Coronavirus", 5, 100, "omikron")
 omikron.pridej_variantu("omikron")
 omikron.pridej_variantu("delta")
 print(omikron)
 print(omikron.pocet_obeti)
-
